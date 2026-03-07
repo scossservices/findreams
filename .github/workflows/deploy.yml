@@ -25,6 +25,9 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Create CNAME file
+        run: echo "findreamssolutions.com" > dist/CNAME
+
       - name: Deploy
         if: success()
         uses: peaceiris/actions-gh-pages@v4
